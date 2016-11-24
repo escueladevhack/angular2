@@ -10,12 +10,14 @@ import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 
 import { EmotionsService } from './shared/services/emotions.service';
+import { MayusculizadorPipe } from './shared/pipes/mayusculizador.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    MainComponent
+    MainComponent,
+    MayusculizadorPipe
   ],
   imports: [
     Routing,

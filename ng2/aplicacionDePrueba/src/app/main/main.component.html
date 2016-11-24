@@ -1,4 +1,4 @@
-<h2>Pon tu imagen...</h2>
+<h2>{{'pon tu imagen...' | mayusculizar}}</h2>
 
 <img [src]="laURL" *ngIf="laURL"  style="max-width: 500px;">
 
@@ -8,5 +8,5 @@
 </form>
 
 <div>
-  <div *ngFor="let resultado of resultados">{{resultado.emocion}}: {{resultado.puntaje}}</div>
+  <div *ngFor="let resultado of resultados">{{resultado.emocion | mayusculizar}}: {{resultado.puntaje}}</div>
 </div>
