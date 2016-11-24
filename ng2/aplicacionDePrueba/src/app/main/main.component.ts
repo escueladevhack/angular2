@@ -7,14 +7,26 @@ import { EmotionsService } from '../shared/services/emotions.service'
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+  
+  laURL: string = 'https://i.ytimg.com/vi/Km5A8m6bt_M/maxresdefault.jpg';
+  resultados: any[];
 
-  constructor(emotionsService: EmotionsService) {
-    emotionsService.getEmotions('http://socgen.ucla.edu/wp-content/uploads/2013/02/fear-cropped-proto-custom_28.jpg').then(data => {
-      console.log(data)
-    })
+  constructor(public emotionsService: EmotionsService) {
   }
 
   ngOnInit() {
+  }
+
+  getEmotions() {
+    this.emotionsService.getEmotions(this.laURL).then(data => {
+      this.resultados = Object.keys(data[0].scores).map(resultado => {
+        return {
+          emocion: resultado,
+          puntaje: data[0].scores[resultado]
+        }
+      })
+
+    });
   }
 
 }
