@@ -1,0 +1,9 @@
+<img [src]="url" *ngIf="url"  style="max-width: 500px;">
+
+<div>
+  <input type="submit" value="Mostrar emociones" (click)="getEmotions()">
+</div>
+
+<div>
+  <div *ngFor="let resultado of resultados">{{resultado.emocion | mayusculizar}}: {{resultado.puntaje}}</div>
+</div>

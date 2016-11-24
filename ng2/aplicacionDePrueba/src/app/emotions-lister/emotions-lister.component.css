@@ -1,0 +1,12 @@
+input {
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #fa0e80;
+  border: 0;
+  color: #fafef0;
+}
+
+input:hover {
+  background-color: rgba(0,0,0,0.2);
+}

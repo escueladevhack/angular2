@@ -11,13 +11,15 @@ import { MainComponent } from './main/main.component';
 
 import { EmotionsService } from './shared/services/emotions.service';
 import { MayusculizadorPipe } from './shared/pipes/mayusculizador.pipe';
+import { EmotionsListerComponent } from './emotions-lister/emotions-lister.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     MainComponent,
-    MayusculizadorPipe
+    MayusculizadorPipe,
+    EmotionsListerComponent
   ],
   imports: [
     Routing,

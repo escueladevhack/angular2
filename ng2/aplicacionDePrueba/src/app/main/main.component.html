@@ -1,12 +1,9 @@
 <h2>{{'pon tu imagen...' | mayusculizar}}</h2>
 
-<img [src]="laURL" *ngIf="laURL"  style="max-width: 500px;">
-
 <form>
   <input type="text" name="formulario" placeholder="La URL" [(ngModel)]="laURL">
-  <input type="submit" value="Mostrar emociones" (click)="getEmotions()">
 </form>
 
-<div>
-  <div *ngFor="let resultado of resultados">{{resultado.emocion | mayusculizar}}: {{resultado.puntaje}}</div>
-</div>
+
+
+<app-emotions-lister url="{{laURL}}"> </app-emotions-lister>
