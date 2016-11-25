@@ -1,3 +1,8 @@
-<p>
-  navbar works!
-</p>
+<nav class="barra-de-navegacion">
+  <ul class="la-lista">
+    <li>hola {{nombre}}</li>
+    <li *ngFor="let ruta of rutas">
+      <a routerLink="{{ruta.path}}">{{ruta.label}}</a>
+    </li>
+  </ul>
+</nav>

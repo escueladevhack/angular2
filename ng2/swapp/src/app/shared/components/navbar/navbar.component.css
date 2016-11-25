@@ -1,0 +1,12 @@
+.barra-de-navegacion {
+  background: limegreen;
+}
+.la-lista {
+  display: flex;
+  list-style: none;
+}
+
+.la-lista>li {
+  padding-right: 1rem;
+}
+

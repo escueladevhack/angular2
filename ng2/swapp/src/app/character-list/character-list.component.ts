@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/services/data.service';
+
 @Component({
   selector: 'app-character-list',
   templateUrl: './character-list.component.html',
