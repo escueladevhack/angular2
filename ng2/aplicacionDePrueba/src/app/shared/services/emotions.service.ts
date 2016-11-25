@@ -15,7 +15,8 @@ export class EmotionsService {
       'Ocp-Apim-Subscription-Key': '49e072cd369c4e2b946357e83674fd2e'
     });
     
-    return this.hachetetepe.post(this.urlDelAPI, stringDeDatos, {headers: headers});
+    return this.hachetetepe.post(this.urlDelAPI, stringDeDatos, {headers: headers})
+    ;
   }
 
 }

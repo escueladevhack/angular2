@@ -1,0 +1,19 @@
+<section class="character-card" *ngIf="character">
+  <span [ngSwitch]="detailedView">
+    <a [routerLink]="['/character', character._id]" *ngSwitchCase="false">
+      <h1>Hotel {{character.name}}</h1>
+    </a>
+
+    <h1 *ngSwitchCase="true">Hotel {{character.name}}</h1>
+    
+  </span>
+  <p>
+    {{character.description}}
+  </p>
+  <p>
+    Rating: {{character.rating}}
+  </p>
+  <p *ngIf="detailedView">
+    Reservaciones: {{character.reservations}}
+  </p>
+</section>
