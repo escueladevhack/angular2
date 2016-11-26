@@ -1,0 +1,19 @@
+<md-card>
+  <form class="create-form" name="formGoal" (ngSubmit)="createGoal()">
+    <div class="form-input">
+      <md-input name="name" placeholder="Name" [(ngModel)]="goal.name"></md-input>
+    </div>
+
+    <div class="form-input">
+      <md-input name="description" placeholder="Description" [(ngModel)]="goal.description"></md-input>
+    </div>
+
+    <div class="form-input">
+      <input name="date" type="date" placeholder="Due Date" [(ngModel)]="goal.due_date">
+    </div>
+
+    <div class="form-input">
+      <button md-button type="submit">Guardar</button>
+    </div>
+  </form>
+</md-card>

@@ -1,0 +1,15 @@
+
+<div class="container">
+  <button md-fab (click)="showForm()">
+    <md-icon class="md-24" >add</md-icon>
+  </button>
+  <div *ngIf="isVisible">
+    <app-goal-form (onSaved)="addGoal($event)"></app-goal-form>
+  </div>
+  <div>
+   <h1>{{"Title" | translate }} </h1>
+</div>
+<md-grid-list cols="4" [style.background]="'lightblue'">
+   <md-grid-tile *ngFor="let goal of goalsList">{{goal.name}}</md-grid-tile>
+</md-grid-list>
+</div>
