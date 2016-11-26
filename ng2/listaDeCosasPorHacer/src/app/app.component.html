@@ -1,0 +1,7 @@
+<app-el-formulario (onAgregar)="nuevoElemento($event)"></app-el-formulario>
+
+<app-la-lista [lasTareas]="listaDeTareas"></app-la-lista>
+
+<div *ngIf="listaDeTareas.length">
+  Faltan: {{listaDeTareas | cuantoFalta}} tareas
+</div>

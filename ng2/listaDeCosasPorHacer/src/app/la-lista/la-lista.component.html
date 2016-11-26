@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let tarea of lasTareas; let i = index;">
+    <label for="tarea_{{i}}">
+        {{tarea.label}}
+    </label>
+    <input id="tarea_{{i}}" type="checkbox" [(ngModel)]="tarea.completada">
+  </li>
+</ul>
